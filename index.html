@@ -7,295 +7,294 @@
   <title>Document</title>
 </head>
 <body>
+  <section>
+    <header>
+      <h1>JS Practice</h1>
+      <p>Open this file in your code editor. Use Live Server to 
+        launch it in your browser. With the browser and the code 
+        editor both visible follow the instructions in the 
+      &lt;script&gt; tag below. Follow along and watch for 
+    changes in the browser.</p>
+    </header>
 
-	<section>
-		<header>
-			<h1>JS Practice</h1>
-			<p>Open this file in your code editor. Use Live Server to 
-				launch it in your browser. With the browser and the code 
-				editor both visible follow the instructions in the 
-			&lt;script&gt; tag below. Follow along and watch for 
-		changes in the browser.</p>
-		</header>
+    <div id="hello"></div>
+    <h2 id="name"></h2>
+    <div id="display"></div>
 
-		<div id="hello"></div>
-		<h2 id="name"></h2>
-		<div id="display"></div>
+  </section>
 
-	</section>
+  <!-- Script! -->
+  <script>
+    // Follow the instructions here! 
 
-	<!-- Script! -->
-	<script>
-		// Follow the instructions here! 
+    // TODO: Often times you'll want to test and look for 
+    // errors. Use the console for this. The console appears in 
+    // the browser. Right click the browser window and choose: 
+    // inspect. Click the console tab. 
 
-		// TODO: Often times you'll want to test and look for 
-		// errors. Use the console for this. The console appears in 
-		// the browser. Right click the browser window and choose: 
-		// inspect. Click the console tab. 
+    console.log('Hello World');
+    // The line above prints a message to the console. 
 
-		console.log('Hello World');
-		// The line above prints a message to the console. 
-    
-		// TODO: Print your own message to the console below: 
+    // TODO: Print your own message to the console below: 
 
-		// Save this file to see the update in the browser. 
-    // Remember the message will appear in the console! 
+    // Save this file to see the update in the browser. 
+  // Remember the message will appear in the console! 
 
-		// Like Python JavaScript uses variables! The languages are 
-		// very similar but have a few differences in syntax. 
-		// In JS we use a keyword: const, let, or var the first time 
-		// we declare a variable, and we never use var! You only
-    // have to remember let and const. 
+    // Like Python JavaScript uses variables! The languages are 
+    // very similar but have a few differences in syntax. 
+    // In JS we use a keyword: const, let, or var the first time 
+    // we declare a variable, and we never use var! You only
+  // have to remember let and const. 
 
-		let score = 0;
-		
-		// If you made it this far you get 500 points: 
+    let score = 0;
 
-		score = 500;
+    // If you made it this far you get 500 points: 
 
-		// Notice this time we don't use let! The variable 
-    // score has already been declared!
-    
-		// TODO: Give yourself another 500 points. Add 
-    // 500 more points to score like this: score = score + 500
+    score = 500;
 
+    // Notice this time we don't use let! The variable 
+  // score has already been declared!
 
-		// You can print your score to the console: 
+    // TODO: Give yourself another 500 points. Add 
+  // 500 more points to score like this: score = score + 500
 
-		console.log(score);
 
-		// TODO: Give yourself another 500 points. A shorthand
-    // x = x + 100 is x += 100. try that here: 
-    
-    
-		// TODO: Make a new variable called name. Since this 
-		// variable is not going to change declare it with const
-		// Set it a string using the quotation marks. Something
-    // like const name = 'Gimli'
-
-		
-
-		// TODO: Try changing your name. 
-
-		// name = 'Frodo';
-
-		// You should see an error in the console. 
-
-		// TypeError: Attempted to assign to readonly property.
-    // Be sure to comment that line out or you will 
-    // keep getting this error! 
-
-		// const is short for cosntant. Things that are constant 
-		// don't change! Believe it or not most of the variables 
-		// you define will not change! 
-
-		// Be a better JS programmer today: 
-		// Use const over let as your first choice!
-    // (using var is bad practice forget I ever mentioned it!)
-    // If you are planning to change the value of a variable
-    // use let otherwise you should use const.
-
-		// TODO: If you set your name and didn't change it 
-		// give yourself 1550 points!
-
-
-		// Sometimes you'll want to display both a string and a variable. 
-		// You can do this just like Python with the + operator!
-		console.log('My Score is ' + score);
-
-		// TODO: you name and your score below:
-
-
-		// TODO: If you printed your name and your score give yourself 
-		// another 750 points!
-
-		// TODO: Like Python's fstring JS has a template string. use it 
-		// like this:
-
-		console.log(`Hello ${name} world ${score}`);
-
-		// Notice the template string begins with ` and ends with ` 
-		// This is the "backquote" or "back tick". It's in the upper
-		// left of the keyboard to the left of the 1 key under the ~ .
-		// Variables included in a template string are wrapped in ${var}
-
-		// Change the string above so it prints your name and your score: 
-		// `${name} has score: ${score}`
-
-		// This is all fun in the console but it would be better if we 
-		// could print something to page in the browser. To do this you 
-		// need a reference to an element in the DOM. To get a reference 
-		// You will use some JS along with a selector like you might 
-		// use with CSS! Selectors traverse the DOM and find the element 
-    // or elements described by the selector!
-
-		const hello = document.querySelector('#hello');
-		// This isn't going to change so we used: const!
-    
-    // TODO: Find this element yourself. Look for the tag with 
-    // the attribute: id="hello"
-		// If you found it give yourself 1275 points.
-
-		// TODO: Use console.log() to log the hello variable to the console
-    // Something like: console.log(hello)
-    
-
-		// You should see: <div id="hello"></div>
-		// TODO: If you see this give yourself 10000 points!
-
-		// TODO: If you put something inside the tags you would see it 
-		// in the browser. Currently the tag is empty. You are going to 
-    // add some content with JavaScript! 
-    // You can put something in the tags with JS like this: 
-    
-    // hello.innerHTML = 'Hello World';
-    
-    // The innerHTML property sets the content of the element. 
-    // Important! Setting innerHTML replaces the content that was there! 
-
-		// TODO: Make div#hello display your name and your score! 
-    // Use the template string. Something like: 
-    // someElement.innerHTML = `foo ${x} bar ${y}`
-    
-
-		// TODO: The text is too small. Besides setting the content with 
-		// JS you can also set the style of an element with JS. 
-    
-    // Try this: 
-		// hello.style.fontSize = '16px';
-    // You don't get any points for this because I'm giving you the answer! 
-		
-		// In JS all style properties are on the style property of an element. 
-    // For example: 
-    
-    // someElement.style.someStyle = someValue
-    // or
-    // hello.style.color = 'red'
-		
-    // In CSS style properties are kabab case in JS the names are camel case!
-    
-		// Here are some examples CSS -> JS:
-    
-		// font-size -> fontSize 
-    // (someElement.style.fontSize = '2.5em' notice a number with a unit must be quoted)
-    
-		// color -> color 
-    // (someElement.style.color = '#ff00ff' color values are quoted)
-    
-		// font-weight -> fontWeight 
-    // (someElement.style.fontWeight = 'bold' named values are quoted)
-    
-		// background-color -> backgroundColor
-    // someElement.style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
-		
-    // etc.
-    
-		// Values in CSS almost always have a unit. In JS you'll always
-		// specify a value as a string: '16px', '1rem', 'red', '#ff00ff' etc
-
-		// TODO: You get 3000 points each time you specify a CSS property 
-		// with JS. Style the hello element use the following styles and more 
-		// if you can think of any: 
-		// fontSize, color, fontWeight
-
-
-
-		// TODO: There are two more elements above: div#name and div#display
-		// If you can find these give yourself another 650 points! 
-    
-
-		// TODO: Make a reference to div#name declare a variable for this 
-		// with const.
-    
-    
-    // TODO: Give yourself 5000 points
-
-		// TODO: Make a reference to div#display
-
-
-		// TODO: If you used const give yourself 5000 points. 
-    // If you use let give yourself 1000 points. If you used 
-    // var subtract 1,000,000 points! 
-
-    
-		// Are you winning yet? 
-
-		// TODO: Display your name in div#name use the reference 
-		// you created earlier setting the .innerHTML property 
-    // to your name variable that you defined above. 
-    // Funny you have changed value of name? Good thing you
-    // declared name with const! 
-
-
-		// TODO: If you see your name give yourself 100000 points!
-
-
-		// TODO: Display your score in div#display be sure to use the 
-		// reference you created earlier! 
-
-
-		// TODO: If you see your score give yourself 150000 points! 
-
-
-		// TODO: Style your name. Use the the element reference 
-		// variable followed by .style and then by the name of 
-		// a CSS property in camel case! Something like: 
-
-		// name.style.fontSize = '32px'
-		// Style at least four properties! 
-    
-    // TODO: Give yourself 60000 points for each property
-    // you styled. Make it easy on yourself something like: 
-    // score += numOfProps * 60000
-    
-
-		// TODO: Style the score element. Follow the steps above! 
-
-
-    // TODO: Give yourself some points 60000 for each property 
-    // that was styled. 
-    
-    
-		// Your final score my not be displayed. This is because 
-		// setting the innerHTML of an element to the value of a variable 
-		// sets the contents of that element at the moment. Changing the 
-		// variable won't cause the value to change!
-    // You'll need to set the innerHTML each time your value changes!
-
-		// To make this more effecient you should use a function. In JS 
-		// We define a function with the keyword function followed by 
-		// the name of the function and {}. Here is an example:
-
-		function myFunction(param) {
-			// some code here! 
-		}
-
-		// TODO: Define a function to update the score call it: updateScore
-    // Something like: function updateScore(points) { ... }
-    
-		// We favor camelCase in JS land! Think of it like a programming 
-		// accent! 
-    // In the example function above points is a parameter variable. 
-    // It's value is set when we call the function. 
-    // The body of the function is inside the curly brackets { and }
-    // In the body of the function add points to your score
-    // then update the div#display element to show the new value.
-
-
-    // TODO: If you did that you get 50000 points! Call your function
-    // here and give yourself some points. Something like: updateScore(50000)
-    
-    
-		// TODO: Go back to the top and find every place you added points 
-		// Replace each line with a call to updateScore() be sure to 
-    // include the number of points!
-		
-    
-		// NOTE! You should also move the lines of code where you defined your
-		// references to div#name and div#display to the top of this script! 
-    // ** They need be defined before they are used. ** 
-    // Do this right now!    
-		
-	</script>
+    // You can print your score to the console: 
+
+    console.log(score);
+
+    // TODO: Give yourself another 500 points. A shorthand
+  // x = x + 100 is x += 100. try that here: 
+
+
+    // TODO: Make a new variable called name. Since this 
+    // variable is not going to change declare it with const
+    // Set it a string using the quotation marks. Something
+  // like const name = 'Gimli'
+
+
+
+    // TODO: Try changing your name. 
+
+    // name = 'Frodo';
+
+    // You should see an error in the console. 
+
+    // TypeError: Attempted to assign to readonly property.
+  // Be sure to comment that line out or you will 
+  // keep getting this error! 
+
+    // const is short for cosntant. Things that are constant 
+    // don't change! Believe it or not most of the variables 
+    // you define will not change! 
+
+    // Be a better JS programmer today: 
+    // Use const over let as your first choice!
+  // (using var is bad practice forget I ever mentioned it!)
+  // If you are planning to change the value of a variable
+  // use let otherwise you should use const.
+
+    // TODO: If you set your name and didn't change it 
+    // give yourself 1550 points!
+
+
+    // Sometimes you'll want to display both a string and a variable. 
+    // You can do this just like Python with the + operator!
+    console.log('My Score is ' + score);
+
+    // TODO: you name and your score below:
+
+
+    // TODO: If you printed your name and your score give yourself 
+    // another 750 points!
+
+    // TODO: Like Python's fstring JS has a template string. use it 
+    // like this:
+
+    console.log(`Hello ${name} world ${score}`);
+
+    // Notice the template string begins with ` and ends with ` 
+    // This is the "backquote" or "back tick". It's in the upper
+    // left of the keyboard to the left of the 1 key under the ~ .
+    // Variables included in a template string are wrapped in ${var}
+
+    // Change the string above so it prints your name and your score: 
+    // `${name} has score: ${score}`
+
+    // This is all fun in the console but it would be better if we 
+    // could print something to page in the browser. To do this you 
+    // need a reference to an element in the DOM. To get a reference 
+    // You will use some JS along with a selector like you might 
+    // use with CSS! Selectors traverse the DOM and find the element 
+  // or elements described by the selector!
+
+    const hello = document.querySelector('#hello');
+    // This isn't going to change so we used: const!
+
+  // TODO: Find this element yourself. Look for the tag with 
+  // the attribute: id="hello"
+    // If you found it give yourself 1275 points.
+
+    // TODO: Use console.log() to log the hello variable to the console
+  // Something like: console.log(hello)
+
+
+    // You should see: <div id="hello"></div>
+    // TODO: If you see this give yourself 10000 points!
+
+    // TODO: If you put something inside the tags you would see it 
+    // in the browser. Currently the tag is empty. You are going to 
+  // add some content with JavaScript! 
+  // You can put something in the tags with JS like this: 
+
+  // hello.innerHTML = 'Hello World';
+
+  // The innerHTML property sets the content of the element. 
+  // Important! Setting innerHTML replaces the content that was there! 
+
+    // TODO: Make div#hello display your name and your score! 
+  // Use the template string. Something like: 
+  // someElement.innerHTML = `foo ${x} bar ${y}`
+
+
+    // TODO: The text is too small. Besides setting the content with 
+    // JS you can also set the style of an element with JS. 
+
+  // Try this: 
+    // hello.style.fontSize = '16px';
+  // You don't get any points for this because I'm giving you the answer! 
+
+    // In JS all style properties are on the style property of an element. 
+  // For example: 
+
+  // someElement.style.someStyle = someValue
+  // or
+  // hello.style.color = 'red'
+
+  // In CSS style properties are kabab case in JS the names are camel case!
+
+    // Here are some examples CSS -> JS:
+
+    // font-size -> fontSize 
+  // (someElement.style.fontSize = '2.5em' notice a number with a unit must be quoted)
+
+    // color -> color 
+  // (someElement.style.color = '#ff00ff' color values are quoted)
+
+    // font-weight -> fontWeight 
+  // (someElement.style.fontWeight = 'bold' named values are quoted)
+
+    // background-color -> backgroundColor
+  // someElement.style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
+
+  // etc.
+
+    // Values in CSS almost always have a unit. In JS you'll always
+    // specify a value as a string: '16px', '1rem', 'red', '#ff00ff' etc
+
+    // TODO: You get 3000 points each time you specify a CSS property 
+    // with JS. Style the hello element use the following styles and more 
+    // if you can think of any: 
+    // fontSize, color, fontWeight
+
+
+
+    // TODO: There are two more elements above: div#name and div#display
+    // If you can find these give yourself another 650 points! 
+
+
+    // TODO: Make a reference to div#name declare a variable for this 
+    // with const.
+
+
+  // TODO: Give yourself 5000 points
+
+    // TODO: Make a reference to div#display
+
+
+    // TODO: If you used const give yourself 5000 points. 
+  // If you use let give yourself 1000 points. If you used 
+  // var subtract 1,000,000 points! 
+
+
+    // Are you winning yet? 
+
+    // TODO: Display your name in div#name use the reference 
+    // you created earlier setting the .innerHTML property 
+  // to your name variable that you defined above. 
+  // Funny you have changed value of name? Good thing you
+  // declared name with const! 
+
+
+    // TODO: If you see your name give yourself 100000 points!
+
+
+    // TODO: Display your score in div#display be sure to use the 
+    // reference you created earlier! 
+
+
+    // TODO: If you see your score give yourself 150000 points! 
+
+
+    // TODO: Style your name. Use the the element reference 
+    // variable followed by .style and then by the name of 
+    // a CSS property in camel case! Something like: 
+
+    // name.style.fontSize = '32px'
+    // Style at least four properties! 
+
+  // TODO: Give yourself 60000 points for each property
+  // you styled. Make it easy on yourself something like: 
+  // score += numOfProps * 60000
+
+
+    // TODO: Style the score element. Follow the steps above! 
+
+
+  // TODO: Give yourself some points 60000 for each property 
+  // that was styled. 
+
+
+    // Your final score my not be displayed. This is because 
+    // setting the innerHTML of an element to the value of a variable 
+    // sets the contents of that element at the moment. Changing the 
+    // variable won't cause the value to change!
+  // You'll need to set the innerHTML each time your value changes!
+
+    // To make this more effecient you should use a function. In JS 
+    // We define a function with the keyword function followed by 
+    // the name of the function and {}. Here is an example:
+
+    function myFunction(param) {
+      // some code here! 
+    }
+
+    // TODO: Define a function to update the score call it: updateScore
+  // Something like: function updateScore(points) { ... }
+
+    // We favor camelCase in JS land! Think of it like a programming 
+    // accent! 
+  // In the example function above points is a parameter variable. 
+  // It's value is set when we call the function. 
+  // The body of the function is inside the curly brackets { and }
+  // In the body of the function add points to your score
+  // then update the div#display element to show the new value.
+
+
+  // TODO: If you did that you get 50000 points! Call your function
+  // here and give yourself some points. Something like: updateScore(50000)
+
+
+    // TODO: Go back to the top and find every place you added points 
+    // Replace each line with a call to updateScore() be sure to 
+  // include the number of points!
+
+
+    // NOTE! You should also move the lines of code where you defined your
+    // references to div#name and div#display to the top of this script! 
+  // ** They need be defined before they are used. ** 
+  // Do this right now!    
+
+</script>
 </body>
 </html>
